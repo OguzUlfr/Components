@@ -1,0 +1,126 @@
+$info-color : #00A3FF;
+$danger-color :  #FF0000;
+$alert-color :  #FFB800;
+$success-color :  #19B000;
+$box-color : #E8E8E8;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+html,body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100%;
+}
+body{
+  overflow-x: hidden;
+  .info{
+    color: $info-color;
+    background-color: $info-color;
+  }
+  .info-hover{
+    &:hover{
+      background-color: $info-color;
+      color: #fff;
+    }
+  }
+  .danger{
+    color: $danger-color;
+    background-color: $danger-color;
+  }
+  .danger-hover{
+    &:hover{
+      background-color: $danger-color;
+      color: #fff;
+    }
+  }
+  .alert{
+    color: $alert-color;
+    background-color: $alert-color;
+  }
+  .alert-hover{
+    &:hover{
+      background-color: $alert-color;
+      color: #fff;
+    }
+  }
+  .success{
+    color: $success-color;
+    background-color: $success-color;
+  }
+  .success-hover{
+    &:hover{
+      background-color: $success-color;
+      color: #fff;
+    }
+  }
+  .alert-box{
+    position: relative;
+    right: -100%;
+    top: -12%;
+    width: 820px;
+    height: 98px;
+    background-color: $box-color;
+    border-radius: 8px;
+    margin: auto;
+    transition: 1s;
+    .alert-icon{
+      position: absolute;
+      top: -20%;
+      left: -10%;
+      width: 135px;
+      height: 135px;
+      border-radius: 100px;
+      span{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        font-size: 80px;
+        color: #fff;
+      }
+    }
+    .alert-text{
+      position: relative;
+      width: 80%;
+      height: 100%;
+      font-family: 'Roboto', sans-serif;
+      font-size: 30px;
+      left: 8%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .close-btn{
+      position: absolute;
+      top: 23%;
+      right: -3%;
+      width: 54px;
+      height: 54px;
+      border-radius: 50px;
+      cursor: pointer;
+      background-color: #fff;
+      span{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        font-size: 50px;
+        border-radius: 50px;
+      }
+      }
+    }
+  }
+  .alert-btn{
+    width: 160px;
+    height: 100px;
+    color: #fff;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin: 20px;
+    text-decoration: none;
+    border-radius: 10px;
+  }

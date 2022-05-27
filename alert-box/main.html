@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="main.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+  <a  onclick="alert_box(0)" class="alert-btn info" style="color: #fff;">İnfo</a>
+  <div class="alert-box info">
+    <div class="alert-icon info" ><span class="material-icons">question_mark</span></div>
+    <div class="alert-text">System Message</div>
+    <div class="close-btn" onclick="close_btn(0)"><span class="material-icons info-hover">close</span></div>
+  </div>
+  <a  onclick="alert_box(1)" class="alert-btn danger" style="color: #fff;">Danger</a>
+  <div class="alert-box danger">
+    <div class="alert-icon danger"><span class="material-icons">question_mark</span></div>
+    <div class="alert-text">System Message</div>
+    <div class="close-btn" onclick="close_btn(1)"><span class="material-icons danger-hover">close</span></div>
+  </div>
+  <a  onclick="alert_box(2)" class="alert-btn alert" style="color: #fff;">Alert</a>
+  <div class="alert-box alert">
+    <div class="alert-icon alert"><span class="material-icons">question_mark</span></div>
+    <div class="alert-text">System Message</div>
+    <div class="close-btn" onclick="close_btn(2)"><span class="material-icons alert-hover">close</span></div>
+  </div>
+  <a  onclick="alert_box(3)" class="alert-btn success" style="color: #fff;">Success</a>
+  <div class="alert-box success">
+    <div class="alert-icon success"><span class="material-icons">question_mark</span></div>
+    <div class="alert-text">System Message</div>
+    <div class="close-btn" onclick="close_btn(3)"><span class="material-icons success-hover">close</span></div>
+  </div>
+  <script>
+    let alert_boxs = document.querySelectorAll(".alert-box");
+    function alert_box(n){
+      alert_boxs[n].style.right="-10%";
+      function deneme(){
+        alert_boxs[n].style.right="-100%";
+      }
+      setInterval(deneme, 5000);
+    }
+    function close_btn(n){
+      alert_boxs[n].style.right="-100%";
+    }
+  </script>
+</body>
+</html>
